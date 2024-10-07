@@ -25,6 +25,9 @@ const memberRoutes = require('./routes/memberRoutes');
 const historyRoutes = require('./routes/historyRoutes');
 
 // Mount routes
+app.get('/', (req, res) => {
+  res.send('Welcome to the Library Management System API');
+});
 app.use('/api/auth', authRoutes);     // Authentication routes (sign up, login)
 app.use('/api/books', bookRoutes);    // Book management routes (add, update, remove, view)
 app.use('/api/members', memberRoutes); // Member management routes (view, update, delete, etc.)
