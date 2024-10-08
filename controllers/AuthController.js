@@ -42,7 +42,7 @@ exports.login = async (req, res) => {
       return res.status(400).json({ message: 'Invalid credentials' });
     }
 
-    const token = generateToken(user._id, user.role); // Use the utility function to generate the token
+    const token = generateToken(user._id, user.role);
 
     res.json({ token });
   } catch (error) {
